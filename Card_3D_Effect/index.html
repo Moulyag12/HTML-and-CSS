@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Social Media Icons</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    </head>
+    <body>
+        <div class="card">
+            <div class="content">
+              <div class="user"><span class="fa fa-user"></span></div>
+                <header>Coding</header>
+                <div class="icons">
+              <a href="#"><span class="fa fa-instagram"></span></a>
+              <a href="#"><span class="fa fa-facebook"></span></a>
+              <a href="#"><span class="fa fa-twitter"></span></a>
+              <a href="#"><span class="fa fa-github"></span></a>
+                </div>
+            </div>
+        </div>
+        <script>
+            $('body').mousemove(function(p){
+                let rotateX = -($(window).innerWidth()/2-p.pageX)/20; 
+                let rotateY = -($(window).innerHeight()/2-p.pageY)/10; 
+                $('.card').css("transform","rotateX("+rotateX+"deg) rotateY("+rotateY+"deg)");
+            });
+            $(document).mouseout(function(){
+             $('.card').css("transform","");
+      });
+        </script>
+    </body>
+</html>
